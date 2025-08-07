@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #050505e8;
+  color: #fff;
+  overflow: hidden;
+  text-align: center;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fireworks {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.card {
+  width: 350px;
+  height: 450px;
+  perspective: 1000px;
+  margin-bottom: 30px;
+}
+
+.card:hover .front {
+  transform: rotateY(180deg);
+}
+
+.card:hover .back {
+  transform: rotateY(0deg);
+}
+
+.front, .back {
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 99, 60, 0.85);
+  border-radius: 20px;
+  box-shadow: 0 0 30px #30e68b;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 1s;
+  padding: 20px;
+}
+
+.front {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: rotateY(0deg);
+}
+
+.back {
+  transform: rotateY(-180deg);
+}
+
+.flag {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.quaid {
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.urdu-poetry {
+  font-family: 'Noto Nastaliq Urdu', serif;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.quote {
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.countdown h2 {
+  margin-top: 20px;
+}
+
+#timer {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00ff88;
+}
